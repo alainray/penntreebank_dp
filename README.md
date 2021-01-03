@@ -100,3 +100,26 @@ Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .
 ## Dataset
 
 The code for the Dataset class for PyTorch use is provided both on the sample notebook as well as in `penndb.py`.
+
+In its base form, the dataset will return both a list with the sentence parts and also the associated dependency graph.
+
+However, the dataset takes in an optional parameter `tokenizer`, which takes a `PreTrainedTokenizer` from the `transformers` library. This will tokenize the sentences and will be returned in addition to the sentence parts and the graph.
+
+Example:
+
+```python
+sentence, matrix, tokens = data[0]
+
+print("The original sentence is:")
+print(" ".join(sentence))
+print("The decoded sentence is:")
+print(tokenizer.decode(tokens))
+```
+Output:
+
+```
+The original sentence is:
+Jim Pattison Industries Ltd. , one of a group of closely held companies owned by entrepreneur James Pattison , said it `` intends to seek control '' of 30%-owned Innopac Inc. , a Toronto packaging concern .
+The decoded sentence is:
+[CLS] Jim Pattison Industries Ltd., one of a group of closely held companies owned by entrepreneur James Pattison, said it ` ` intends to seek control'' of 30 % - owned Innopac Inc., a Toronto packaging concern. [SEP]
+```
