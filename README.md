@@ -11,6 +11,35 @@ As the original PennTreeBank dataset uses Constituency Parsing, we used the LTH 
 
 It is a convenience for those who wish to use the WSJ and Brown corpora using Dependendency Parsing and have no idea how to convert the files (like me at the start). The main part of this (the conversion) is the work of the people who developed LTH.
 
+### Where can I find the `penn_treebank_3.zip` file?
+
+If you look around the internet, you should be able to find it. Unfortunately I cannot share it as I understand it is no longer publicly available.
+
+The file should have a structure like this:
+
+```
+treebank_3
+| -- docs
+| -- dysfl
+| -- parsed
+    | -- mrg
+        | -- atis
+        | -- brown
+        | -- swbd
+        | -- wsj
+    | -- prd
+        | -- atis
+        | -- brown
+        | -- swbd
+        | -- wsj
+| -- tagged
+    | -- pos
+        | -- atis
+        | -- brown
+        | -- swbd
+        | -- wsj
+```
+
 ### Why does this work only for the WSJ and Brown corpora?
 
 Because LTH only works for those datasets. I believe there are no annotated trees for the rest of the datasets as well.
