@@ -157,5 +157,3 @@ The decoded sentence is:
 We provide training, validation and test splits for WSJ and Brown corpora.
 * For WSJ, the splits are based on: https://aclweb.org/aclwiki/POS_Tagging_(State_of_the_art).
 * For Brown I found no information on how to create the splits. Therefore, they are arbitrary. See details on the code for the class. 
-
-For Brown
