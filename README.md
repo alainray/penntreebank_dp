@@ -152,3 +152,10 @@ Jim Pattison Industries Ltd. , one of a group of closely held companies owned by
 The decoded sentence is:
 [CLS] Jim Pattison Industries Ltd., one of a group of closely held companies owned by entrepreneur James Pattison, said it ` ` intends to seek control'' of 30 % - owned Innopac Inc., a Toronto packaging concern. [SEP]
 ```
+### Dataset Splits
+
+We provide training, validation and test splits for WSJ and Brown corpora.
+* For WSJ, the splits are based on: https://aclweb.org/aclwiki/POS_Tagging_(State_of_the_art).
+* For Brown I found no information on how to create the splits. Therefore, they are arbitrary. See details on the code for the class. 
+
+For Brown
